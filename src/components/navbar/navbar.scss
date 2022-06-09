@@ -1,0 +1,147 @@
+@import "../../app.scss";
+.navbar{
+    top: 0;
+    height: 70px;
+    width: 100%;
+    border-bottom: 0.5px solid rgb(231,228,228);
+    background-color: white;
+    display: flex;
+    align-items: center;
+    color: #555;
+    position: fixed;
+    z-index: 999;
+
+    .wrapper{
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        .left{
+            display: flex;
+            align-items: center;
+
+            @include tablet{
+                display: none;
+            }
+
+            .lItem{
+                display: flex;
+                align-items: center;
+                margin-right: 30px;
+                font-size: 12px;
+                cursor: pointer;
+
+                .lButton{
+                    padding: 8px 15px;
+                    background-color: rgb(166,38,38);
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+
+                .icon{
+                    font-size: 18px;
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .right{
+            display: flex;
+            align-items: center;
+
+            @include tablet{
+                width: 100%;
+            }
+            
+            .rItem{
+                display: flex;
+                align-items: center;
+                margin-right: 30px;
+                font-size: 14px;
+                cursor: pointer;
+
+                @include tablet{
+                    width: 100%;
+                    display: contents;
+                }
+
+                .search{
+                    display: flex;
+                    align-items: center;
+                    background: rgb(245, 245, 245);
+
+                    @include tablet{
+                        width: 100%;
+                    }
+
+                    input{
+                        border: none;
+                        outline: none;
+                        background: rgb(245, 245, 245);
+                        padding: 10px 15px;
+                        width: 400px;
+                        text-align: right;
+                        border-radius: 5px;
+
+                        @include tablet{
+                            width: 100%;
+                        }
+                    
+        
+                        &::placeholder{
+                            font-size: 12px;
+                            color: lightgray;
+                        }
+                    }
+
+                    .icon{
+                        color: lightgray;
+                        margin-right: 5px;
+                    }
+                }
+
+                .avatar{
+                    width: 70px;
+                    height: 70px;
+
+                    @include tablet{
+                        display: none;
+                    }
+                }
+            }
+
+            .rItems{
+                @include tablet{
+                    display: none;
+                }
+
+                display: flex;
+                align-items: center;
+                margin-right: 30px;
+                font-size: 14px;
+                cursor: pointer;
+            }
+
+            .rItemLocation{
+                display: flex;
+                align-items: center;
+                margin-right: 30px;
+                font-size: 14px;
+                cursor: pointer;
+
+                @include tablet{
+                   position: fixed;
+                   left: 30px;
+                }
+
+                .iconLocation{
+                    margin-left: 5px;
+                }
+            }
+        }   
+    }
+}

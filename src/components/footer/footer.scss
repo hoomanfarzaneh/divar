@@ -1,0 +1,33 @@
+@import '../../app.scss';
+
+.footer{
+    display: none;
+
+    @include tablet{
+        display: flex;
+
+        .siChatBtn{
+            padding: 8px 20px;
+            border-radius: 5px;
+            font-weight: 500;
+            font-size: 14px;
+            border: none;
+            border: 1px solid rgb(230, 227, 227);
+            cursor: pointer;
+            width: 50%;
+        }
+
+        .siConnectBtn{
+            padding: 8px 16px;
+            margin-left: 10px;
+            background-color: rgb(166,38,38);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: 500;
+            font-size: 14px;
+            cursor: pointer;
+            width: 50%;
+        }
+    }
+}

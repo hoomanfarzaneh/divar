@@ -1,0 +1,65 @@
+@import '../../app.scss';
+
+.featured{
+    width: 90%;
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 280px;
+    margin-left: 40px;
+    
+
+    @include tablet{
+        width: 98%;
+        margin-right: 20px;
+    }
+
+    .card{
+        margin: 20px;
+        display: flex;
+        justify-content: space-between;
+        width: 25%;
+        -webkit-box-shadow: 2px 4px 10px 1px rgb(0,0,0,0.47); 
+        box-shadow: 2px 4px 10px 1px rgb(201,201,201,0.47);
+        cursor: pointer;
+
+        @include tablet{
+            width:45%;
+        }
+
+        @include mobile{
+            width:90%;
+        }
+
+        .lSide{
+            
+            img{
+                height: 150px;
+                width: 150px;
+                margin: 10px;
+                border-radius: 5px;
+                
+            @include tablet{
+                width: 200px;
+            }
+            }
+        }
+
+        .rSide{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px;
+            
+            .title{
+                font-weight: bold;
+                font-size: 16px;
+            }
+
+            .desc{
+                font-size: 12px;
+                color: gray;
+            }   
+        }
+    }
+}
